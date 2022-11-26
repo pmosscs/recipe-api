@@ -133,11 +133,15 @@ footer h5 {
 	margin-bottom: 20px;
 }
 
-.add-content button {
+.add-content button, .card-button {
 	background-color: #62898A;
 	border: none;
 	padding: 10px 20px;
 	font-size: 20px;
 	color: white;
 	margin-bottom: 60px;
+}
+
+.add-content button:hover {
+	background-color: #92C3C4;
 }
