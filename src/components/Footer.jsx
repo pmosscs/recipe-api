@@ -4,24 +4,26 @@ import { ImFacebook, ImInstagram, ImTwitter, ImGithub } from "react-icons/im";
 const Footer = () => {
   return (
     <footer>
-      <div>
+      
+      <div className="socials">
         <h5>Hit us up on our socials!</h5>
         <div>
           <a href="https://www.devmountain.com" target="_blank">
-            <ImFacebook size="1.5em" color="#3f3f3f" />
+            <ImFacebook size="1.5em" color="#62898A" />
           </a>
           <a href="https://www.devmountain.com" target="_blank">
-            <ImInstagram size="1.5em" color="#3f3f3f" />
+            <ImInstagram size="1.5em" color="#62898A" />
           </a>
           <a href="https://www.devmountain.com" target="_blank">
-            <ImTwitter size="1.5em" color="#3f3f3f" />
+            <ImTwitter size="1.5em" color="#62898A" />
           </a>
           <a href="https://www.devmountain.com" target="_blank">
-            <ImGithub size="1.5em" color="#3f3f3f" />
+            <ImGithub size="1.5em" color="#62898A" />
           </a>
         </div>
       </div>
       <svg
+        className="devmountain-logo"
         width="110"
         height="110"
         viewBox="0 0 512 512"
@@ -37,6 +39,7 @@ const Footer = () => {
           stroke-linejoin="round"
         />
       </svg>
+      
     </footer>
   );
 };

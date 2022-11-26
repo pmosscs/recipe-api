@@ -16,7 +16,6 @@ function App() {
         <Route path="/recipe/:id" element={<DetailScreen />} />
       </Routes>
       <Footer />
-      <h1>working</h1>
     </div>
   );
 }
