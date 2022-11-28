@@ -9,15 +9,22 @@ const HomeScreen = () => {
 
   useEffect(() => {
     axios.get("https://recipes.devmountain.com/recipes").then((res) => {
-      console.log(res.data) //result?
-      setRecipes(res.data) //result?
+      console.log(res.data) 
+      setRecipes(res.data) 
     })
   }, [])
 
   return (
-    <div>
+    <div className="home-screen">
       <AdBanner />
+      <div className='card-section'>
       <RecipeCard />
+      <RecipeCard />
+      <RecipeCard />
+      <RecipeCard />
+      <RecipeCard />
+
+      </div>
       {/* Much code from Part 2 will be placed around here. Do your best! */}
     </div>
   )
