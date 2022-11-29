@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function RecipeCard () {
+function RecipeCard ({recipe}) {
     return (
         <div className="recipe-card">
             <div className="img-div">
@@ -9,7 +10,9 @@ function RecipeCard () {
             <div className="card-info">
                 <h2>Creme Brule</h2>
                 <div className="btn-div">
+                    <Link to={`/recipe/${recipe}`}> 
                     <button className="card-button">See More</button>
+                    </Link>
                 </div>
             </div>
         </div>
@@ -17,3 +20,5 @@ function RecipeCard () {
 }
 
 export default RecipeCard
+
+// .recipe_id at the link. but makes the page white.

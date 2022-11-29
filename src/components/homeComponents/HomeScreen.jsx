@@ -15,10 +15,27 @@ const HomeScreen = () => {
     })
   }, [])
 
+  const [searchInput, setSearchInput] = useState("");
+
+  const searchInputReturn = (typed) => {
+    setSearchInput(typed);
+    console.log(searchInput)
+  }
+
+  const recipeDisplay = recipes.filter((recipe, index) => {
+    let title = recipe.recipe_name.toLowerCase()
+    let searchParams = searchInput.toLowerCase()
+    return title.includes(searchParams)
+  })
+  .map((recipe, index) => {
+    return <RecipeCard recipe={recipe} />
+  })
+
   return (
     <div className="home-screen">
       <AdBanner />
-      <Form />
+      <Form searchInputReturn={searchInputReturn} />
+      <h1>{searchInput}</h1>
       <div className='card-section'>
       <RecipeCard />
       <RecipeCard />
@@ -27,7 +44,6 @@ const HomeScreen = () => {
       <RecipeCard />
 
       </div>
-      {/* Much code from Part 2 will be placed around here. Do your best! */}
     </div>
   )
 }

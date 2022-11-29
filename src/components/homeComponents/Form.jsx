@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
+import { BiSearch } from 'react-icons/bi';
 
-function Form() {
-    const [search, setSearch] = useState("")
+function Form({searchInputReturn}) {
 
 return (
-    <form>
-        <div>
-            <input placeholder="Search for a Recipe" type="text" value={search} onChange={(e) => {
-                console.log(e.target.value)
-                setSearch(e.target.value)
-                
+    <form className="search-form" onSubmit={(e) => e.preventDefault()}>
+        <div className="form-search">
+            <BiSearch size="30px" color="#CD7941" />
+            <input placeholder="Search for a Recipe" type="text" onChange={(e) => {
+                searchInputReturn(e.target.value);
             }} />
         </div>
     </form>
