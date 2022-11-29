@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import AdBanner from './AdBanner'
 import RecipeCard from './RecipeCard'
+import Form from './Form'
 
 const HomeScreen = () => {
   
@@ -17,6 +18,7 @@ const HomeScreen = () => {
   return (
     <div className="home-screen">
       <AdBanner />
+      <Form />
       <div className='card-section'>
       <RecipeCard />
       <RecipeCard />
