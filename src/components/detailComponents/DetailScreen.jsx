@@ -2,9 +2,12 @@ import React from 'react'
 
 const DetailScreen = () => {  
   return (
-    <section>
-      {/* Welcome to the details page! This page will be reusable. Follow instructions to know what to do here. */}
-    </section>
+    <div className='detail-screen'>
+      <div className='img-banner'>
+
+      </div>
+      <div className='detail-body'></div>
+    </div>
   );
 };
 

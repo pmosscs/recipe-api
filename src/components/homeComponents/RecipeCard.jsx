@@ -1,7 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 function RecipeCard ({recipe}) {
+    const handleClick = () => {
+        
+    }
+
     return (
         <div className="recipe-card">
             <div className="img-div">
@@ -10,9 +14,8 @@ function RecipeCard ({recipe}) {
             <div className="card-info">
                 <h2>Creme Brule</h2>
                 <div className="btn-div">
-                    <Link to={`/recipe/${recipe}`}> 
-                    <button className="card-button">See More</button>
-                    </Link>
+                    <button onClick={handleClick} className="card-button">See More</button>
+                    
                 </div>
             </div>
         </div>
