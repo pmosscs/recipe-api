@@ -1,18 +1,21 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function RecipeCard ({recipe}) {
-    const handleClick = () => {
-        
+    const navigate = useNavigate();
+
+    const handleClick = (e) => {
+        console.log('ugh')
+        navigate(`/recipe/${recipe.recipe_id}`)
     }
 
     return (
         <div className="recipe-card">
             <div className="img-div">
-                <img src="https://www.simplyrecipes.com/thmb/F2Yo7A74ZG6X9Yw6kycKaARDQL8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2018__02__Creme-Brulee-LEAD-VERTICAL-c99fa6c67f20441c9430df056b6e9d6a.jpg" alt="recipe photo" />
+                <img src={recipe.image_url} alt={recipe.recipe_name} />
             </div>
             <div className="card-info">
-                <h2>Creme Brule</h2>
+                <h2>{recipe.recipe_name}</h2>
                 <div className="btn-div">
                     <button onClick={handleClick} className="card-button">See More</button>
                     

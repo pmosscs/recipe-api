@@ -248,10 +248,16 @@ all scrapable  */
 	padding: 60px;
 }
 
+.detail-body p {
+	font-size: 20px;
+}
+
 .left-info, .right-info {
 	box-shadow: 0 3px 10px rgba(0,0,0,0.6);
 	padding: 20px;
 	border-radius: 3px;
+	height: fit-content;
+	
 }
 
 .left-info {
@@ -268,10 +274,14 @@ all scrapable  */
 }
 
 .left-info h2, .right-info h2 {
-	font-size: 25px;
+	font-size: 27px;
 	text-align: center;
 	margin-bottom: 20px;
 	
+}
+
+.left-info h4 {
+	font-size: 20px;
 }
 
 .bottom-box {
@@ -290,4 +300,8 @@ all scrapable  */
 font-weight: bold;
 	font-size: 50px;
 	color: #CD7941;
+}
+
+.left-info p {
+	white-space: pre-wrap;
 }

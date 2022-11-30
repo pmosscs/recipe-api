@@ -35,13 +35,8 @@ const HomeScreen = () => {
     <div className="home-screen">
       <AdBanner />
       <Form searchInputReturn={searchInputReturn} />
-      <h1>{searchInput}</h1>
       <div className='card-section'>
-      <RecipeCard />
-      <RecipeCard />
-      <RecipeCard />
-      <RecipeCard />
-      <RecipeCard />
+      {recipeDisplay}
 
       </div>
     </div>
@@ -49,3 +44,5 @@ const HomeScreen = () => {
 }
 
 export default HomeScreen
+
+// why does recipe display show all recipes if there is nothing typed?

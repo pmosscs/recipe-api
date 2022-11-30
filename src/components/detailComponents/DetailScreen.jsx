@@ -1,31 +1,53 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import DetailImage from './DetailImage';
+import { useParams } from "react-router-dom"
+import axios from 'axios';
 
 
 const DetailScreen = () => {  
+  
+    const { id } = useParams();
+
+    const [recipe, setRecipe] = useState([]);
+
+    useEffect(() => {
+      axios.get(`https://recipes.devmountain.com/recipes/${id}`)
+      .then((res) => {
+        console.log(res.data)
+        setRecipe(res.data)
+      })
+    }, [])
+
+    const recipeImage = recipe.image_url;
+    const recipeTitle = recipe.recipe_name;
+    const prepTime = recipe.prep_time;
+    const cookTime = recipe.cook_time;
+    const serves = recipe.serves;
+    const instructions = recipe.instructions;
+  
+
+
   return (
     <div className='detail-screen'>
-      <DetailImage />
+      <DetailImage recipeImage={recipeImage} recipeTitle={recipeTitle} />
       <div className='detail-body'>
         <div className='left-info'>
           <div className='top-box'>
           <h2>Recipe</h2>
-          <p>Prep time: 15 min</p>
-          <p>Cook Time: 15 min</p>
-          <p>Serves: 2</p>
+          <p>Prep time: {prepTime}</p>
+          <p>Cook Time: {cookTime}</p>
+          <p>Serves: {serves}</p>
           </div>
           <div className='bottom-box'>
           <h2>Ingredients</h2>
-          <p>2 steaks</p>
-          <p>butter</p>
-          <p>salt</p>
-          <p>pepper</p>
+          {recipe.ingredients && recipe.ingredients.map((ing, index) => {
+              return <h4>{ing.quantity} {ing.ingredient}</h4>
+            })}
           </div>
         </div>
         <div className='right-info'>
           <h2>Instructions</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <p>{instructions && JSON.parse(instructions)}</p>
         </div>
       </div>
     </div>
@@ -33,3 +55,6 @@ const DetailScreen = () => {
 };
 
 export default DetailScreen;
+
+
+// dont understand the && in the ingredients and instructions

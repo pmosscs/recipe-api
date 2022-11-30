@@ -1,7 +1,6 @@
 import React from "react";
-import salmon from "../../assets/salmon.jpg"
 
-function DetailImage () {
+function DetailImage ({recipeImage, recipeTitle}) {
 
     return (
         <div className="detail-image" style={{
@@ -9,15 +8,17 @@ function DetailImage () {
               190deg,
               rgba(0, 0, 0, 0.8),
               rgba(0, 0, 0, 0.8)),
-              url(${salmon})`,
+              url(${recipeImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center"
           }}>
-            <h1 className="detail-title">Good Ol' Steak</h1>
+            <h1 className="detail-title">{recipeTitle}</h1>
         </div>
     )
 }
 
 export default DetailImage
 
+
+//background position only works if you delete it, put it back, then save WHY??
 
