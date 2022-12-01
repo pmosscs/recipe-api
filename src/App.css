@@ -246,6 +246,7 @@ all scrapable  */
 	justify-content: center;
 	gap: 80px;
 	padding: 60px;
+	width: 100vw;
 }
 
 .detail-body p {
