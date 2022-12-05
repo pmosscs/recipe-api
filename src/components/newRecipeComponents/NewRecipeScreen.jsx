@@ -144,7 +144,11 @@ const NewRecipeScreen = () => {
                 </div>
               </div>
               <div className="bottom-of-form">
-                <button type="button" onClick={addIngredient}>
+                <button
+                  className="add-an"
+                  type="button"
+                  onClick={addIngredient}
+                >
                   Add Another
                 </button>
                 <textarea
@@ -153,6 +157,7 @@ const NewRecipeScreen = () => {
                   name="instructions"
                   value={values.instructions}
                   onChange={handleChange}
+                  style={{ resize: "none" }}
                 />
                 <button className="save-button" type="submit">
                   Save

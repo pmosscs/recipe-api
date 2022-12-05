@@ -22,7 +22,7 @@ time, mark, audio, video {
 
 /* --------- Begin your CSS Below here --------- */
 
-body {
+body, textarea {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -312,6 +312,12 @@ font-weight: bold;
 	flex-direction: column;
 	align-items: center;
 	width: 50%;
+	font-size: 20px;
+}
+
+.new-recipe-page * {
+	margin: 5px 10px;
+	font-size: 20px;
 }
 
 .nr-wrapper {
@@ -329,12 +335,13 @@ font-weight: bold;
 .bottom-of-form {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
 .ingredients-boxes {
 	display: flex;
 	flex-direction: row;
-
+	margin-left: 0;
 }
 
 .ing-divs {
@@ -342,3 +349,53 @@ font-weight: bold;
 	flex-direction: column;
 }
 
+textarea {
+	width: 95%;
+}
+
+input, textarea {
+	border: solid black 1px;
+	border-radius: 2px;
+	padding: 5px;
+}
+
+.radio-buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-left: 60px;
+	margin-right: 60px;
+}
+
+.save-button {
+	background-color: #62898A;
+	border: none;
+	padding: 10px 20px;
+	font-size: 25px;
+	color: white;
+}
+
+.add-an {
+	background-color: #CE7A42;
+	border: none;
+	padding: 10px 20px;
+	font-size: 25px;
+	color: white;
+}
+
+.radio-buttons label {
+	display: flex;
+	align-items: center;
+}
+
+input[type="radio"] {
+	height: 35px;
+	width: 35px;
+	border: none;
+	
+}
+
+.new-recipe-page h1 {
+	font-size: 35px;
+	margin: 20px 0;
+}
