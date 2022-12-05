@@ -1,5 +1,6 @@
 import { Formik } from "formik";
 import React, { useState } from "react";
+import axios from "axios";
 
 const NewRecipeScreen = () => {
   const initialValues = {
@@ -17,6 +18,7 @@ const NewRecipeScreen = () => {
   const onSubmit = (values) => {
     values.ingredients = ingredients;
     console.log(values);
+    postRequest(values);
   };
 
   const [ingredients, setIngredients] = useState([]);
@@ -29,6 +31,17 @@ const NewRecipeScreen = () => {
     setName("");
     setQuantity("");
   };
+
+  const ingredientDisplay = ingredients.map((ing, ind) => {
+    return (
+      <li>
+        {ing.quantity} {ing.name}
+      </li>
+    );
+  });
+
+  const postRequest = (values) =>
+    axios.post("https://recipes.devmountain.com/recipes", values);
 
   return (
     <div className="new-recipe-page">
@@ -126,10 +139,7 @@ const NewRecipeScreen = () => {
                 />
               </div>
               <div>
-                <ul>
-                  <li>placeholder</li>
-                  <li>text</li>
-                </ul>
+                <ul>{ingredientDisplay}</ul>
               </div>
             </div>
             <div>
