@@ -326,7 +326,7 @@ font-weight: bold;
 	justify-content: space-between;
 }
 
-.bottom-box {
+.bottom-of-form {
 	display: flex;
 	flex-direction: column;
 }
@@ -334,9 +334,11 @@ font-weight: bold;
 .ingredients-boxes {
 	display: flex;
 	flex-direction: row;
+
 }
 
 .ing-divs {
 	display: flex;
 	flex-direction: column;
 }
+

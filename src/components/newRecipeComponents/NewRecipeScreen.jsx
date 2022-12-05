@@ -143,18 +143,20 @@ const NewRecipeScreen = () => {
                   <ul>{ingredientDisplay}</ul>
                 </div>
               </div>
-              <div className="bottom-box">
+              <div className="bottom-of-form">
                 <button type="button" onClick={addIngredient}>
                   Add Another
                 </button>
-                <input
-                  type="text"
+                <textarea
+                  rows="5"
                   placeholder="What are the instructions?"
                   name="instructions"
                   value={values.instructions}
                   onChange={handleChange}
                 />
-                <button type="submit">Save</button>
+                <button className="save-button" type="submit">
+                  Save
+                </button>
               </div>
             </form>
           )}
