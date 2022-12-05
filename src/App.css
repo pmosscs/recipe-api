@@ -347,6 +347,7 @@ font-weight: bold;
 .ing-divs {
 	display: flex;
 	flex-direction: column;
+	width: 50%;
 }
 
 textarea {
@@ -371,7 +372,7 @@ input, textarea {
 	background-color: #62898A;
 	border: none;
 	padding: 10px 20px;
-	font-size: 25px;
+	font-size: 20px;
 	color: white;
 }
 
@@ -379,7 +380,7 @@ input, textarea {
 	background-color: #CE7A42;
 	border: none;
 	padding: 10px 20px;
-	font-size: 25px;
+	font-size: 20px;
 	color: white;
 }
 
@@ -397,5 +398,24 @@ input[type="radio"] {
 
 .new-recipe-page h1 {
 	font-size: 35px;
-	margin: 20px 0;
+	margin: 40px 0 20px 0;
+}
+
+.new-recipe-page button {
+	margin: 20px;
+}
+
+.list-items {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+}
+
+.name-bar, .img-bar {
+	width: 50%;
+}
+
+.name-bar {
+	margin-right: 80px;
 }

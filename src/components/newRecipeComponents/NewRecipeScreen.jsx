@@ -50,8 +50,9 @@ const NewRecipeScreen = () => {
         <Formik initialValues={initialValues} onSubmit={onSubmit}>
           {({ values, handleChange, handleSubmit }) => (
             <form onSubmit={handleSubmit}>
-              <div>
+              <div className="top-page">
                 <input
+                  className="name-bar"
                   type="text"
                   placeholder="Name"
                   name="recipeName"
@@ -59,6 +60,7 @@ const NewRecipeScreen = () => {
                   onChange={handleChange}
                 />
                 <input
+                  className="img-bar"
                   type="text"
                   placeholder="Image URL"
                   name="imageURL"
@@ -139,7 +141,7 @@ const NewRecipeScreen = () => {
                     }}
                   />
                 </div>
-                <div className="list items">
+                <div className="list-items">
                   <ul>{ingredientDisplay}</ul>
                 </div>
               </div>
