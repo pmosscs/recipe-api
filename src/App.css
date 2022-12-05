@@ -305,3 +305,38 @@ font-weight: bold;
 	white-space: pre-wrap;
 }
 
+/**** add recipe page *****/
+
+.new-recipe-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+}
+
+.nr-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.new-recipe-page div {
+	display: flex;
+	justify-content: space-between;
+}
+
+.bottom-box {
+	display: flex;
+	flex-direction: column;
+}
+
+.ingredients-boxes {
+	display: flex;
+	flex-direction: row;
+}
+
+.ing-divs {
+	display: flex;
+	flex-direction: column;
+}
